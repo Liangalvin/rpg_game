@@ -1,3 +1,4 @@
+require "character"
 class Villian < Character
 	attr_accessor :name, :hp, :hit_chance
 	def initialize
