@@ -14,7 +14,7 @@ cpu = Villian.new #every bad guy is "beast"
 # *ask the fight question
 def fight_question
   fighting = true
-  while fighting #aslong as fightin = true
+  while fighting #aslong as fighting = true
     puts "Fight the beast or flee?! (Type 'fight' or 'flee')"
     fight_flee = gets.chomp.downcase
     if fight_flee == "fight"
@@ -28,9 +28,9 @@ def fight_question
     end
   end
 end
-puts "Welcome to your life #{gamer.name}, Let's start your life!"
+puts "Welcome to your life, #{gamer.name}. Let's start your life!"
 
-puts "You encounter your first problem of the day,brush your teeth or eat breakfast?(Type 'first' or 'second'): "
+puts "You encounter your first problem of the day, brush your teeth or eat breakfast?(Type 'first' or 'second'): "
 
 first_answer = gets.chomp.downcase
 if first_answer == "first"
@@ -50,7 +50,7 @@ if second_answer == "chicken"
   puts "The chicken is still alive and challenges you to a duel!"
   fight_question
 elsif seond_answer == "second"
-  puts "The fish throws it's scales at you like a ninja star!"
+  puts "The fish throws its scales at you like a ninja star!"
   fight_question
 end
 
