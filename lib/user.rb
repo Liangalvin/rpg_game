@@ -1,10 +1,11 @@
 require "character"
 class User < Character
 	def initialize(name)
-		super(name, 10, 80)
+		super name, 10, 80
 	end
 	def flee
 		puts "You lost control of your bowels and fled"
+		sleep 1
 	end
 	def fight(cpu)
 		keep_fighting = true
@@ -18,13 +19,15 @@ class User < Character
 						cpu.hp, keep_fighting = 0, false
 					else
 						puts "You did #{damage}"
-						cpu.hp -= damage
 						sleep 1
+						cpu.hp -= damage
 						puts "The beast lost #{damage} hp"
+						sleep 1
 					end
 				end
 			else
 				puts "You missed the attack, looks like cake not only adds to the waistline but also to the arms..."
+				sleep 1 # Delay 1 second
 			end
 			if cpu.hp < 0
 				if cpu_chance > 61
@@ -32,13 +35,16 @@ class User < Character
 					if damage == 4
 						puts "Critical hit! The beast did #{damage}!"
 						gamer.hp -= damage
+						sleep 1
 					else
 						puts "The foul beast did #{damage}"
 						gamer.hp -= damage
+						sleep 1
 					end
 				end
 			else
 				puts "The beast missed their attack! Quickly send this foul beast back to the abyss!"
+				sleep 1
 			end
 		end
 	end
