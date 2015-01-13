@@ -3,6 +3,7 @@ Gem::Specification.new do |gem|
 	gem.version = "0.0.0.pre"
 	gem.author = "Alvin"
 	gem.files = Dir["lib/*.rb"]
+	gem.email = "" # Insert your email here 
 	gem.executables << "rpg_game"
 	gem.extra_rdoc_files = Dir["*.md"]
 end
